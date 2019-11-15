@@ -1,0 +1,15 @@
+
+This is a list of planned projects for beetle vision.
+
+TODO : dcGAN
+  Use the dcgan repo on github to see what comes out
+TODO : saliency map
+  Create saliency maps from a classifier (maybe pytorch?). Interested to see if it puts heat on things like attenae especially
+TODO : unsupervised learning
+  Use the MLforArtists notebook to obtain activations in the VGG16 trained on imagenet data to do clustering of the beetle images.
+TODO : Autoencoder
+  Figure out how to write this from scratch, with color images of any size.
+TODO : Classifier
+  Create a classifier in Keras from scratch without transfer learning.
+  
+ 
