@@ -1,0 +1,1 @@
+sudo docker run --gpus all -it -v /home/colt/:/tf -p 8888:8888 cjgo:tf2
