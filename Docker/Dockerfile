@@ -10,4 +10,5 @@ RUN pip install seaborn
 RUN pip install plotly==4.7.1
 RUN apt-get install -y libsm6 libxext6 libxrender-dev
 RUN pip install opencv-python
+RUN pip install -U keras-tuner
 RUN pip install pillow
