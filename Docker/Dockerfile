@@ -1,8 +1,16 @@
-FROM tensorflow/tensorflow:nightly-gpu-jupyter
+FROM tensorflow/tensorflow:nightly-gpu
 MAINTAINER cjgo
 
+#RUN python -m pip install --upgrade pip
+RUN pip install jupyterlab
 RUN pip install sklearn
-RUN apt-get update
+
+#Fixes import cv2 error
+RUN apt-get update ##[edited]
+RUN apt-get install 'ffmpeg'\
+    'libsm6'\ 
+    'libxext6'  -y
+
 RUN pip install opencv-python
 RUN pip install matplotlib
 RUN pip install pandas
@@ -12,3 +20,6 @@ RUN apt-get install -y libsm6 libxext6 libxrender-dev
 RUN pip install opencv-python
 RUN pip install -U keras-tuner
 RUN pip install pillow
+
+EXPOSE 8888
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
